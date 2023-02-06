@@ -7,6 +7,11 @@ call plug#begin()
 "   - e.g. `call plug#begin('~/.vim/plugged')`
 "   - Avoid using standard Vim directory names like 'plugin'
 
+set nowrap
+
+" Set how Vim formats text
+set formatoptions-=tc
+
 " Set highlight search
 set hlsearch
 
@@ -36,6 +41,15 @@ au BufNewFile,BufRead *.py
     \ set tabstop=4
     \ softtabstop=4
     \ shiftwidth=4
+    \ textwidth=79
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
+
+au BufNewFile,BufRead *.js,*.jsx
+    \ set tabstop=2
+    \ softtabstop=2
+    \ shiftwidth=2
     \ textwidth=79
     \ expandtab
     \ autoindent
