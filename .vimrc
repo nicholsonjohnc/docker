@@ -10,7 +10,7 @@ call plug#begin()
 set nowrap
 
 " Set how Vim formats text
-set formatoptions-=tc
+set formatoptions-=t formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Set highlight search
 set hlsearch
@@ -69,6 +69,8 @@ set foldlevel=99
 nnoremap <space> za
 
 Plug 'vim-scripts/indentpython.vim'
+
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 Plug 'Valloric/YouCompleteMe'
 let g:ycm_autoclose_preview_window_after_completion=1
